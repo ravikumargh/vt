@@ -606,7 +606,7 @@ StatusComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](38, "5");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "small");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "No GPS");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Fault in GPS");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 1)(42, "a", 2)(43, "mat-card", 10)(44, "div", 4)(45, "h2", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, "10%");
@@ -689,6 +689,120 @@ TripDetailsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODUL
 
 /***/ }),
 
+/***/ 717:
+/*!***********************************************************************************!*\
+  !*** ./src/app/dashboard/dashboard-components/trip-graph/trip-graph.component.ts ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TripGraphComponent": () => (/* binding */ TripGraphComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material/card */ 1961);
+/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng-apexcharts */ 54);
+
+
+
+const _c0 = ["newsletter-chart"];
+class TripGraphComponent {
+    constructor() {
+        this.newsletterchartOptions = {
+            series: [
+                {
+                    name: 'Trip 1',
+                    data: [0, 50, 150, 80, 150, 90, 300, 0]
+                },
+                {
+                    name: 'Trip 2',
+                    data: [0, 30, 50, 20, 80, 10, 50, 0]
+                }
+            ],
+            chart: {
+                height: 290,
+                type: 'area'
+            },
+            dataLabels: {
+                enabled: false
+            },
+            markers: {
+                size: 3,
+            },
+            stroke: {
+                curve: 'smooth',
+                width: '2'
+            },
+            colors: ['#26c6da', '#1e88e5'],
+            legend: {
+                show: false,
+            },
+            grid: {
+                borderColor: 'rgba(0,0,0,.2)',
+                strokeDashArray: 3,
+                yaxis: {
+                    lines: {
+                        show: true
+                    }
+                },
+                xaxis: {
+                    lines: {
+                        show: true
+                    }
+                },
+            },
+            xaxis: {
+                type: 'category',
+                categories: [
+                    '1',
+                    '2',
+                    '3',
+                    '4',
+                    '5',
+                    '6',
+                    '7',
+                    '8'
+                ]
+            },
+            tooltip: {
+                x: {
+                    format: 'dd/MM/yy HH:mm'
+                }
+            }
+        };
+    }
+    ngOnInit() {
+    }
+}
+TripGraphComponent.ɵfac = function TripGraphComponent_Factory(t) { return new (t || TripGraphComponent)(); };
+TripGraphComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TripGraphComponent, selectors: [["app-trip-graph"]], viewQuery: function TripGraphComponent_Query(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, 5);
+    } if (rf & 2) {
+        let _t;
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.chart3 = _t.first);
+    } }, decls: 15, vars: 9, consts: [["id", "newsletter-chart"], [3, "series", "chart", "xaxis", "stroke", "tooltip", "dataLabels", "legend", "colors", "markers"], [1, "list-inline", "text-center", "p-t-10"], [1, "text-muted", "text-info", "m-0"], [1, "fa", "fa-circle", "font-10", "m-r-10"], [1, "text-muted", "text-success", "m-0"]], template: function TripGraphComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-card")(1, "mat-card-content")(2, "mat-card-title");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Trip speed graph");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "apx-chart", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "ul", 2)(7, "li")(8, "h6", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "i", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Trip 2");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li")(12, "h6", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "i", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Trip 1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", ctx.newsletterchartOptions.series)("chart", ctx.newsletterchartOptions.chart)("xaxis", ctx.newsletterchartOptions.xaxis)("stroke", ctx.newsletterchartOptions.stroke)("tooltip", ctx.newsletterchartOptions.tooltip)("dataLabels", ctx.newsletterchartOptions.dataLabels)("legend", ctx.newsletterchartOptions.legend)("colors", ctx.newsletterchartOptions.colors)("markers", ctx.newsletterchartOptions.markers);
+    } }, dependencies: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardTitle, ng_apexcharts__WEBPACK_IMPORTED_MODULE_2__.ChartComponent], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0cmlwLWdyYXBoLmNvbXBvbmVudC5jc3MifQ== */"] });
+
+
+/***/ }),
+
 /***/ 9399:
 /*!*********************************************************************************!*\
   !*** ./src/app/dashboard/dashboard-components/trip-list/trip-list.component.ts ***!
@@ -752,7 +866,7 @@ function TripListComponent_mat_cell_17_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const element_r13 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r13.weight, " minuts ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", element_r13.weight, " minutes ");
 } }
 function TripListComponent_mat_header_cell_19_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-header-cell");
@@ -860,11 +974,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DashboardComponent": () => (/* binding */ DashboardComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
-/* harmony import */ var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/flex-layout/flex */ 5434);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/flex-layout/flex */ 5434);
 /* harmony import */ var _dashboard_components_status_status_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-components/status/status.component */ 5845);
 /* harmony import */ var _dashboard_components_trip_list_trip_list_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard-components/trip-list/trip-list.component */ 9399);
 /* harmony import */ var _dashboard_components_trip_details_trip_details_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard-components/trip-details/trip-details.component */ 6538);
+/* harmony import */ var _dashboard_components_trip_graph_trip_graph_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard-components/trip-graph/trip-graph.component */ 717);
+
 
 
 
@@ -874,15 +990,18 @@ class DashboardComponent {
     ngAfterViewInit() { }
 }
 DashboardComponent.ɵfac = function DashboardComponent_Factory(t) { return new (t || DashboardComponent)(); };
-DashboardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], decls: 6, vars: 0, consts: [["fxLayout", "row wrap"], ["fxFlex.gt-lg", "50", "fxFlex.gt-md", "60", "fxFlex.gt-xs", "100", "fxFlex", "100"], ["fxFlex.gt-lg", "50", "fxFlex.gt-md", "40", "fxFlex.gt-xs", "100", "fxFlex", "100"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "app-status");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 0)(2, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "app-trip-list");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](5, "app-trip-details");
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    } }, dependencies: [_angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__.DefaultLayoutDirective, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_4__.DefaultFlexDirective, _dashboard_components_status_status_component__WEBPACK_IMPORTED_MODULE_0__.StatusComponent, _dashboard_components_trip_list_trip_list_component__WEBPACK_IMPORTED_MODULE_1__.TripListComponent, _dashboard_components_trip_details_trip_details_component__WEBPACK_IMPORTED_MODULE_2__.TripDetailsComponent], encapsulation: 2 });
+DashboardComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: DashboardComponent, selectors: [["app-dashboard"]], decls: 9, vars: 0, consts: [["fxLayout", "row wrap"], ["fxFlex.gt-lg", "50", "fxFlex.gt-md", "60", "fxFlex.gt-xs", "100", "fxFlex", "100"], ["fxFlex.gt-lg", "50", "fxFlex.gt-md", "40", "fxFlex.gt-xs", "100", "fxFlex", "100"], ["fxFlex.gt-lg", "100", "fxFlex.gt-md", "100", "fxFlex.gt-xs", "100", "fxFlex", "100"]], template: function DashboardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](0, "app-status");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div", 0)(2, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](3, "app-trip-list");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](4, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](5, "app-trip-details");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](6, "div", 0)(7, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](8, "app-trip-graph");
+        _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]()();
+    } }, dependencies: [_angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__.DefaultLayoutDirective, _angular_flex_layout_flex__WEBPACK_IMPORTED_MODULE_5__.DefaultFlexDirective, _dashboard_components_status_status_component__WEBPACK_IMPORTED_MODULE_0__.StatusComponent, _dashboard_components_trip_list_trip_list_component__WEBPACK_IMPORTED_MODULE_1__.TripListComponent, _dashboard_components_trip_details_trip_details_component__WEBPACK_IMPORTED_MODULE_2__.TripDetailsComponent, _dashboard_components_trip_graph_trip_graph_component__WEBPACK_IMPORTED_MODULE_3__.TripGraphComponent], encapsulation: 2 });
 
 
 /***/ }),
@@ -897,13 +1016,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DashboardModule": () => (/* binding */ DashboardModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/router */ 2816);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ 6362);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ 6362);
 /* harmony import */ var _demo_material_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../demo-material-module */ 5408);
-/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/flex-layout */ 7114);
+/* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/flex-layout */ 7114);
 /* harmony import */ var _dashboard_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard.component */ 7528);
 /* harmony import */ var _dashboard_routing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard.routing */ 7976);
-/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ng-apexcharts */ 54);
+/* harmony import */ var ng_apexcharts__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ng-apexcharts */ 54);
 /* harmony import */ var _dashboard_components_sales_overview_sales_overview_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dashboard-components/sales-overview/sales-overview.component */ 2245);
 /* harmony import */ var _dashboard_components_our_visiter_our_visiter_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dashboard-components/our-visiter/our-visiter.component */ 2616);
 /* harmony import */ var _dashboard_components_profile_profile_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dashboard-components/profile/profile.component */ 83);
@@ -912,7 +1031,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dashboard_components_status_status_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dashboard-components/status/status.component */ 5845);
 /* harmony import */ var _dashboard_components_trip_list_trip_list_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./dashboard-components/trip-list/trip-list.component */ 9399);
 /* harmony import */ var _dashboard_components_trip_details_trip_details_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./dashboard-components/trip-details/trip-details.component */ 6538);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _dashboard_components_trip_graph_trip_graph_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dashboard-components/trip-graph/trip-graph.component */ 717);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/core */ 3184);
+
 
 
 
@@ -933,16 +1054,16 @@ __webpack_require__.r(__webpack_exports__);
 class DashboardModule {
 }
 DashboardModule.ɵfac = function DashboardModule_Factory(t) { return new (t || DashboardModule)(); };
-DashboardModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineNgModule"]({ type: DashboardModule });
-DashboardModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.CommonModule,
+DashboardModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineNgModule"]({ type: DashboardModule });
+DashboardModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.CommonModule,
         _demo_material_module__WEBPACK_IMPORTED_MODULE_0__.DemoMaterialModule,
-        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__.FlexLayoutModule,
-        ng_apexcharts__WEBPACK_IMPORTED_MODULE_14__.NgApexchartsModule,
-        _angular_router__WEBPACK_IMPORTED_MODULE_15__.RouterModule.forChild(_dashboard_routing__WEBPACK_IMPORTED_MODULE_2__.DashboardRoutes)] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_11__["ɵɵsetNgModuleScope"](DashboardModule, { declarations: [_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.DashboardComponent, _dashboard_components_sales_overview_sales_overview_component__WEBPACK_IMPORTED_MODULE_3__.SalesOverviewComponent, _dashboard_components_our_visiter_our_visiter_component__WEBPACK_IMPORTED_MODULE_4__.OurVisiterComponent, _dashboard_components_profile_profile_component__WEBPACK_IMPORTED_MODULE_5__.ProfileComponent, _dashboard_components_contacts_contacts_component__WEBPACK_IMPORTED_MODULE_6__.ContactsComponent, _dashboard_components_activity_timeline_activity_timeline_component__WEBPACK_IMPORTED_MODULE_7__.ActivityTimelineComponent, _dashboard_components_status_status_component__WEBPACK_IMPORTED_MODULE_8__.StatusComponent, _dashboard_components_trip_list_trip_list_component__WEBPACK_IMPORTED_MODULE_9__.TripListComponent, _dashboard_components_trip_details_trip_details_component__WEBPACK_IMPORTED_MODULE_10__.TripDetailsComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_12__.CommonModule,
+        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_14__.FlexLayoutModule,
+        ng_apexcharts__WEBPACK_IMPORTED_MODULE_15__.NgApexchartsModule,
+        _angular_router__WEBPACK_IMPORTED_MODULE_16__.RouterModule.forChild(_dashboard_routing__WEBPACK_IMPORTED_MODULE_2__.DashboardRoutes)] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵsetNgModuleScope"](DashboardModule, { declarations: [_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.DashboardComponent, _dashboard_components_sales_overview_sales_overview_component__WEBPACK_IMPORTED_MODULE_3__.SalesOverviewComponent, _dashboard_components_our_visiter_our_visiter_component__WEBPACK_IMPORTED_MODULE_4__.OurVisiterComponent, _dashboard_components_profile_profile_component__WEBPACK_IMPORTED_MODULE_5__.ProfileComponent, _dashboard_components_contacts_contacts_component__WEBPACK_IMPORTED_MODULE_6__.ContactsComponent, _dashboard_components_activity_timeline_activity_timeline_component__WEBPACK_IMPORTED_MODULE_7__.ActivityTimelineComponent, _dashboard_components_status_status_component__WEBPACK_IMPORTED_MODULE_8__.StatusComponent, _dashboard_components_trip_list_trip_list_component__WEBPACK_IMPORTED_MODULE_9__.TripListComponent, _dashboard_components_trip_details_trip_details_component__WEBPACK_IMPORTED_MODULE_10__.TripDetailsComponent, _dashboard_components_trip_graph_trip_graph_component__WEBPACK_IMPORTED_MODULE_11__.TripGraphComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.CommonModule,
         _demo_material_module__WEBPACK_IMPORTED_MODULE_0__.DemoMaterialModule,
-        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_13__.FlexLayoutModule,
-        ng_apexcharts__WEBPACK_IMPORTED_MODULE_14__.NgApexchartsModule, _angular_router__WEBPACK_IMPORTED_MODULE_15__.RouterModule] }); })();
+        _angular_flex_layout__WEBPACK_IMPORTED_MODULE_14__.FlexLayoutModule,
+        ng_apexcharts__WEBPACK_IMPORTED_MODULE_15__.NgApexchartsModule, _angular_router__WEBPACK_IMPORTED_MODULE_16__.RouterModule] }); })();
 
 
 /***/ }),
